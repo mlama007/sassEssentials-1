@@ -12,8 +12,10 @@ gulp.task('js', function() {
 
 gulp.task('sass', function () {
     return sass('process/sass/style.scss', {
+      //sourcemap allows linking to SCSS files when in developer tools
       sourcemap: true,
-      style: 'compressed'
+      //style: 'compressed'
+      style: 'expanded'
     })
     .on('error', function (err) {
         console.error('Error!', err.message);
